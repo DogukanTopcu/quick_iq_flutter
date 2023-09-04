@@ -84,8 +84,8 @@ class _Home extends State<Home> {
                             if (value == 'customize') {
                               // Özelleştir butonuna basıldığında yapılacak işlem
                             } else if (value == 'logout') {
-                              Provider.of<BotProvider>(context, listen: false)
-                                  .stopSpeaking();
+                              // Provider.of<BotProvider>(context, listen: false)
+                              //     .stopSpeaking();
                               SharedPreferences prefs =
                                   await SharedPreferences.getInstance();
                               prefs.remove("user");
@@ -128,13 +128,15 @@ class _Home extends State<Home> {
                             onTap: () async {
                               if (isListening) {
                                 await speech.cancel();
+                                // ignore: use_build_context_synchronously
                                 Provider.of<BotProvider>(context, listen: false)
                                     .generateResponse(text);
                               } else {
                                 if (await speech.initialize()) {
-                                  await Provider.of<BotProvider>(context,
-                                          listen: false)
-                                      .stopSpeaking();
+                                  // ignore: use_build_context_synchronously
+                                  // await Provider.of<BotProvider>(context,
+                                  //         listen: false)
+                                  //     .stopSpeaking();
                                   speech.listen(
                                     listenMode: ListenMode.dictation,
                                     localeId: "tr-TR",
@@ -176,8 +178,8 @@ class _Home extends State<Home> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Provider.of<BotProvider>(context, listen: false)
-                            .stopSpeaking();
+                        // Provider.of<BotProvider>(context, listen: false)
+                        //     .stopSpeaking();
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(
                             builder: (context) => const LevelSelector(),

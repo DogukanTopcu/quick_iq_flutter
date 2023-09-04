@@ -62,7 +62,6 @@ class _Level1State extends State<Level1> {
       if (!_showResult) {
         setState(() {
           timepass++;
-          print(timepass);
         });
       } else {
         _level1Object.time = timepass;
@@ -151,7 +150,7 @@ class _Level1State extends State<Level1> {
     );
 
     if (confirm == true) {
-      Navigator.of(context).pushReplacement(
+      Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => const LevelSelector(),
         ),

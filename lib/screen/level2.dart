@@ -176,7 +176,7 @@ class _Level2State extends State<Level2> {
     );
 
     if (confirm == true) {
-      Navigator.of(context).pushReplacement(
+      Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => const LevelSelector(),
         ),

@@ -63,7 +63,7 @@ class _LoginState extends State<Login> {
                       .loadBot(jsonDecode(localStorageUser)["id"]),
 
                   // Change the scene.
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => const Home()))
                 }
               else if (value.statusCode == 404)
