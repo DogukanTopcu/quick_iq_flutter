@@ -95,8 +95,8 @@ class BotProvider with ChangeNotifier {
     // Settings
     FlutterTts flutterTextToSpeech = FlutterTts();
     await flutterTextToSpeech.setLanguage("tr-TR");
-    await flutterTextToSpeech.setPitch(1.5);
-    await flutterTextToSpeech.setSpeechRate(1.1);
+    await flutterTextToSpeech.setPitch(1);
+    await flutterTextToSpeech.setSpeechRate(0.8);
 
     await flutterTextToSpeech.setVoice({
       "name": "Microsoft Emel Online (Natural) - Turkish (Turkey)",

@@ -56,7 +56,7 @@ class _Home extends State<Home> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Center(
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 450),
@@ -64,6 +64,7 @@ class _Home extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    const SizedBox(height: 0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -154,16 +155,16 @@ class _Home extends State<Home> {
                             },
                             child: Image(
                               image: const AssetImage(
-                                  '../../images/content/bot_image.png'),
+                                  'images/content/bot_image.png'),
                               width: isListening ? 50 : 70,
                             ),
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        // const SizedBox(width: 4),
                         Container(
                           alignment: Alignment.center,
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 24, vertical: 16),
+                              horizontal: 10, vertical: 3),
                           width: MediaQuery.of(context).size.width > 450
                               ? 450 / 1.5
                               : MediaQuery.of(context).size.width / 1.5,
@@ -198,7 +199,7 @@ class _Home extends State<Home> {
                           alignment: Alignment.center,
                           children: [
                             Image.asset(
-                              '../../images/content/PlayButton.png',
+                              'images/content/PlayButton.png',
                             ),
                           ],
                         ),

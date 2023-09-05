@@ -32,14 +32,14 @@ class _Level2State extends State<Level2> {
   int timepass = 0;
 
   final List<String> _imagePaths = [
-    '../../images/apple.png',
-    '../../images/berry.png',
-    '../../images/bomb.png',
-    '../../images/bread.png',
-    '../../images/cheese.png',
-    '../../images/crown.png',
-    '../../images/meat1.png',
-    '../../images/meat2.png',
+    'images/apple.png',
+    'images/berry.png',
+    'images/bomb.png',
+    'images/bread.png',
+    'images/cheese.png',
+    'images/crown.png',
+    'images/meat1.png',
+    'images/meat2.png',
   ];
 
   List<String> _cardImages = [];
@@ -246,6 +246,7 @@ class _Level2State extends State<Level2> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const SizedBox(height: 0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -299,7 +300,7 @@ class _Level2State extends State<Level2> {
                         child: Card(
                           child: _cardFlips[index]
                               ? Image.asset(_cardImages[index])
-                              : Image.asset('../../images/wormac.png'),
+                              : Image.asset('images/wormac.png'),
                         ),
                       );
                     },

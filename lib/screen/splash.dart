@@ -88,7 +88,7 @@ class _SplashState extends State<Splash> {
           child: Column(
         children: <Widget>[
           SizedBox(height: 60),
-          Image(image: AssetImage("../../images/wormac.png"), width: 200),
+          Image(image: AssetImage("images/wormac.png"), width: 200),
           SizedBox(height: 15),
           Text(
             "WORMAC#",

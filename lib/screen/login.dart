@@ -129,16 +129,14 @@ class _LoginState extends State<Login> {
                         ),
                       ],
                     ),
-                    Image.asset('../../images/content/quickIq_logo.png',
-                        width: 80),
+                    Image.asset('images/content/quickIq_logo.png', width: 80),
                   ],
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image(
-                        image:
-                            AssetImage("../../images/content/login_image.png"),
+                        image: AssetImage("images/content/login_image.png"),
                         width: 150),
                     Text("Merhaba :)",
                         style: TextStyle(color: Colors.white, fontSize: 20)),

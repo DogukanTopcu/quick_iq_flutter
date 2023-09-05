@@ -46,6 +46,7 @@ class _LevelSelectorState extends State<LevelSelector> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    const SizedBox(height: 0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -102,7 +103,7 @@ class _LevelSelectorState extends State<LevelSelector> {
                         // Carousel içeriği burada oluşturulur
                         Column(
                           children: [
-                            Image.asset("../../images/level1.jpeg"),
+                            Image.asset("images/level1.jpeg"),
                             const SizedBox(height: 20),
                             const Text(
                               "Level 1",
@@ -120,14 +121,14 @@ class _LevelSelectorState extends State<LevelSelector> {
                         Column(
                           children: [
                             _totalScore >= _requiredStars[1]
-                                ? Image.asset("../../images/level2.jpeg")
+                                ? Image.asset("images/level2.jpeg")
                                 : Stack(
                                     children: [
                                       ColorFiltered(
                                         colorFilter: const ColorFilter.mode(
                                             Colors.red, BlendMode.modulate),
-                                        child: Image.asset(
-                                            "../../images/level2.jpeg"),
+                                        child:
+                                            Image.asset("images/level2.jpeg"),
                                       ),
                                       Center(
                                         child: Column(

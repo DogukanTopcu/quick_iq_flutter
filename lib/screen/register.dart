@@ -44,7 +44,7 @@ class Register extends StatelessWidget {
                       child: Column(
                         children: [
                           Image.asset(
-                            '../../images/content/quickIq_logo.png',
+                            'images/content/quickIq_logo.png',
                             height: 150,
                           ),
                           const SizedBox(height: 40),
@@ -65,8 +65,7 @@ class Register extends StatelessWidget {
                       decoration: BoxDecoration(
                         // shape: BoxShape.circle,
                         image: DecorationImage(
-                          image: Image.asset(
-                                  '../../images/content/register.png',
+                          image: Image.asset('images/content/register.png',
                                   width: 300)
                               .image,
                           // fit: BoxFit.cover,

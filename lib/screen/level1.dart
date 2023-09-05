@@ -32,14 +32,14 @@ class _Level1State extends State<Level1> {
   int timepass = 0;
 
   final List<String> _shapes = [
-    '../../images/apple.png',
-    '../../images/berry.png',
-    '../../images/bomb.png',
-    '../../images/bread.png',
-    '../../images/cheese.png',
-    '../../images/crown.png',
-    '../../images/meat1.png',
-    '../../images/meat2.png',
+    'images/apple.png',
+    'images/berry.png',
+    'images/bomb.png',
+    'images/bread.png',
+    'images/cheese.png',
+    'images/crown.png',
+    'images/meat1.png',
+    'images/meat2.png',
   ];
   List<String> _choices = [];
   String? _currentShape;
@@ -214,6 +214,7 @@ class _Level1State extends State<Level1> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const SizedBox(height: 0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

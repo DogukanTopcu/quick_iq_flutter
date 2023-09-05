@@ -193,15 +193,14 @@ class _SignUpState extends State<SignUp> {
                           ),
                         ],
                       ),
-                      Image.asset('../../images/content/quickIq_logo.png',
-                          width: 80),
+                      Image.asset('images/content/quickIq_logo.png', width: 80),
                     ],
                   ),
                   const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset('../../images/content/sign_up_image.png',
+                      Image.asset('images/content/sign_up_image.png',
                           width: 150),
                       const Text(
                         "Bize Katıl",
