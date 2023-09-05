@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quick_iq/providers/user_provider.dart';
@@ -46,6 +48,24 @@ class _Level2State extends State<Level2> {
   int _firstCardIndex = -1;
   int _secondCardIndex = -1;
   bool _isGameStart = false;
+
+  String feedBack = "";
+  List<String> positioveFeedbacks = [
+    "Harika!",
+    "Süpersin!",
+    "Böyle devam",
+    "Çok iyi!",
+    "Başarılı!",
+    "Mükemmel!"
+  ];
+  List<String> negativeFeedbacks = [
+    "Yanlış oldu",
+    "Sanki bunu bir yerde görmüştüm",
+    "Biraz daha denemelisin!",
+    "Üzgünüm, eşleşmedi",
+    "Zor bir oyun cidden!",
+    "Başarabilirsin!"
+  ];
 
   @override
   void initState() {
@@ -104,6 +124,10 @@ class _Level2State extends State<Level2> {
 
         // Eğer seçilen iki kart aynıysa
         if (_cardImages[_firstCardIndex] == _cardImages[_secondCardIndex]) {
+          setState(() {
+            feedBack =
+                positioveFeedbacks[Random().nextInt(positioveFeedbacks.length)];
+          });
           _flippedImages.add(_firstCardIndex);
           _flippedImages.add(_secondCardIndex);
           Provider.of<UserProvider>(context, listen: false)
@@ -113,6 +137,10 @@ class _Level2State extends State<Level2> {
           _secondCardIndex = -1;
         } else {
           // Seçili kartlar aynı değilse, kartları geri çevir
+          setState(() {
+            feedBack =
+                negativeFeedbacks[Random().nextInt(positioveFeedbacks.length)];
+          });
           _level2Object.isCorrect = false;
           Future.delayed(const Duration(seconds: 1)).then((vlaue) {
             setState(() {
@@ -277,9 +305,10 @@ class _Level2State extends State<Level2> {
                   const SizedBox(height: 20),
                   Column(
                     children: [
-                      const Text(
-                        "Harikasın",
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      Text(
+                        feedBack,
+                        style:
+                            const TextStyle(fontSize: 18, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
