@@ -100,10 +100,10 @@ class _Home extends State<Home> {
                           },
                           itemBuilder: (BuildContext context) {
                             return [
-                              const PopupMenuItem<String>(
-                                value: 'customize',
-                                child: Text('Özelleştir'),
-                              ),
+                              // const PopupMenuItem<String>(
+                              //   value: 'customize',
+                              //   child: Text('Özelleştir'),
+                              // ),
                               const PopupMenuItem<String>(
                                 value: 'logout',
                                 child: Text('Çıkış Yap'),
