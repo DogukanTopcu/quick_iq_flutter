@@ -37,7 +37,9 @@ class BotProvider with ChangeNotifier {
   }
 
   Future<void> loadConversations() async {
-    String url = "http://localhost:2000/api/bot/getConversations";
+    // String url = "http://localhost:2000/api/bot/getConversations";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/bot/getConversations";
     await http
         .post(Uri.parse(url), body: {"botId": id.toString()}).then((res) async {
       if (res.statusCode == 200) {
@@ -60,7 +62,9 @@ class BotProvider with ChangeNotifier {
       name = jsonDecode(user)["name"];
     }
 
-    String url = "http://localhost:2000/api/bot/generateText";
+    // String url = "http://localhost:2000/api/bot/generateText";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/bot/generateText";
     await http.post(
       Uri.parse(url),
       body: {
@@ -127,7 +131,9 @@ class BotProvider with ChangeNotifier {
       name = jsonDecode(user)["name"];
     }
 
-    String url = "http://localhost:2000/api/bot/generateText";
+    // String url = "http://localhost:2000/api/bot/generateText";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/bot/generateText";
     await http.post(
       Uri.parse(url),
       body: {
@@ -171,7 +177,9 @@ class BotProvider with ChangeNotifier {
     saveConversation["botId"] = decodeBot["id"];
     saveConversation["userId"] = decodeBot["userId"];
 
-    String url = "http://localhost:2000/api/bot/addNewConversation";
+    // String url = "http://localhost:2000/api/bot/addNewConversation";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/bot/addNewConversation";
     await http.post(
       Uri.parse(url),
       body: {

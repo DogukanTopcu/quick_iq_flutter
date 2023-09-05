@@ -159,7 +159,9 @@ class _Level1State extends State<Level1> {
   }
 
   Future<void> _sendData() async {
-    String url = "http://localhost:2000/api/game/level1/addData";
+    // String url = "http://localhost:2000/api/game/level1/addData";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/game/level1/addData";
     http.post(
       Uri.parse(url),
       body: {

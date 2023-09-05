@@ -32,7 +32,8 @@ class _LoginState extends State<Login> {
   String _password = "";
 
   Future<void> _login() async {
-    String url = 'http://localhost:2000/api/auth/login';
+    // String url = 'http://localhost:2000/api/auth/login';
+    String url = 'https://quick-iq-server.azurewebsites.net/api/auth/login';
     await http
         .post(
           Uri.parse(url),

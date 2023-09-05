@@ -75,7 +75,9 @@ class UserProvider with ChangeNotifier {
   }
 
   Future<void> incrementInDatabase(user, score) async {
-    String url = "http://localhost:2000/api/game/score/increase";
+    // String url = "http://localhost:2000/api/game/score/increase";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/game/score/increase";
     await http.post(
       Uri.parse(url),
       body: {
@@ -113,7 +115,9 @@ class UserProvider with ChangeNotifier {
   }
 
   Future<void> loadBot(int id) async {
-    String url = "http://localhost:2000/api/bot/callAssistant";
+    // String url = "http://localhost:2000/api/bot/callAssistant";
+    String url =
+        "https://quick-iq-server.azurewebsites.net/api/bot/callAssistant";
     await http.post(Uri.parse(url), body: {
       "userId": id.toString(),
     }, headers: {

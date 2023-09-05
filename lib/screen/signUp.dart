@@ -58,7 +58,8 @@ class _SignUpState extends State<SignUp> {
   }
 
   Future<void> _signUp() async {
-    String url = 'http://localhost:2000/api/auth/newUser';
+    // String url = 'http://localhost:2000/api/auth/newUser';
+    String url = 'https://quick-iq-server.azurewebsites.net/api/auth/newUser';
     await http
         .post(
           Uri.parse(url),

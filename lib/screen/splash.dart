@@ -23,7 +23,8 @@ class _SplashState extends State<Splash> {
   }
 
   Future<bool> _login(username, pass) async {
-    String url = 'http://localhost:2000/api/auth/login';
+    // String url = 'http://localhost:2000/api/auth/login';
+    String url = 'https://quick-iq-server.azurewebsites.net/api/auth/login';
     await http.post(
       Uri.parse(url),
       body: {'username': username, 'password': pass},
